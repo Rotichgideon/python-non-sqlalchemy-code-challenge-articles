@@ -32,7 +32,7 @@ class Author:
         return [article for article in Article.all if article.author is self]
 
     def magazines(self):
-        return list(set([article.magazine for article in Article.all if article.author is self])) #lmao
+        return list(set([article.magazine for article in Article.all if article.author is self]))
 
     def add_article(self, magazine, title):
         return Article(self, magazine, title)
